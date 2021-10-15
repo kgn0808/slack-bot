@@ -5,6 +5,8 @@ steps:
         '-c',
         "gcloud secrets versions access latest --secret=$_CREDENTIALS --format='get(payload.data)' | tr '_-' '/+' | base64 -d > ServiceAccountCredentials.json"
     ]
+options:
+  logging: CLOUD_LOGGING_ONLY
 
   - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: /bin/sh
