@@ -6,6 +6,7 @@
 ### SpreadSheetに用語をまとめる
 まずはデータとなる情報をSpreadSheetにまとめます。SpreadSheetを選んだのは誰でも追加編集削除が簡単なためです。A列に用語、B列にその説明を記載していきます。会社内で権限をオープンにしてどんどん用語を集めるのがいいでしょう。
 
+
 ![](./docs/images/spreadsheet.png)
 
 ### SpreadSheetのKeyを取得する
