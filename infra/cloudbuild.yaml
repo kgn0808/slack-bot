@@ -5,9 +5,6 @@ steps:
         '-c',
         "gcloud secrets versions access latest --secret=$_CREDENTIALS --format='get(payload.data)' | tr '_-' '/+' | base64 -d > ServiceAccountCredentials.json"
     ]
-options:
-  logging: CLOUD_LOGGING_ONLY
-
   - name: "gcr.io/cloud-builders/gcloud"
     entrypoint: /bin/sh
     args:
@@ -23,5 +20,7 @@ options:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: 'bash'
     args: [ '-c', 'gcloud config set app/cloud_build_timeout 1600 && gcloud app deploy' ]
+options:
+  logging: CLOUD_LOGGING_ONLY
 
 timeout: '1600s'
