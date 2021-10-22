@@ -14,8 +14,8 @@ logger = logging.getLogger(__name__)
 logger.addHandler(handler)
 logger.setLevel("DEBUG")
 
-LOGGER_CHANNEL_ID = os.getenv("LOGGER_CHANNEL_ID")
-SPREADSHEET_KEY = os.getenv("SPREADSHEET_KEY")
+LOGGER_CHANNEL_ID = os.getenv("_LOGGER_CHANNEL_ID")
+SPREADSHEET_KEY = os.getenv("_SPREADSHEET_KEY")
 SPREADSHEET = f"https://docs.google.com/spreadsheets/d/{SPREADSHEET_KEY}"
 SCOPES = [
     'https://www.googleapis.com/auth/drive',
